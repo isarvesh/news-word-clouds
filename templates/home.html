@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>News in WordClouds | Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+      
+    <style type="text/css">
+      body {padding: 20px;}
+      img{padding: 5px;}
+    </style>
+  </head>
+
+  <body>
+    <h1>News Word Clouds</h1>
+      <p>Too busy to click on each news article to see what it's about? Below you can see all the articles from the BBC front page, displayed as word clouds. If you want to read more about any particular article, just click on the wordcloud to go to the original article</p>
+      {% for article in articles %}
+        <a href="{{article.url}}"><img src="data:image/png;base64,{{article.image}}"></a>
+      {% endfor %}
+  </body>
+</html>
